@@ -1,0 +1,40 @@
+@charset "utf-8";
+@import 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.btn-primary {
+  color: #fff;
+  font-family: Avenir;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  width: 319px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background: #F8BD1C;
+  border: none;
+  margin: 390px 0 0 28px;
+  
+  &-up {
+    color: #fff;
+    font-family: Avenir;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    width: 319px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #F8BD1C;
+    border: none;
+    margin: 286px 0 0 28px;
+  }
+}
+  

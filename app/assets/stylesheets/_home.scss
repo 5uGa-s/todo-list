@@ -1,0 +1,11 @@
+@charset "utf-8";
+@import './variables';
+
+.sign-title {
+  color: $text-base-color;
+  font-family: Avenir;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
