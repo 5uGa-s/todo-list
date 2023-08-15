@@ -1,0 +1,18 @@
+%h2.title Sign up
+= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+  = render "devise/shared/error_messages", resource: resource
+  .field
+    = f.label :email, class: 'sb-title'
+    %br/
+    = f.email_field :email, autofocus: true, autocomplete: "email", class: 'text'
+  .field
+    = f.label :password, class: 'sb-title'
+    %br/
+    = f.password_field :password, autocomplete: "new-password", class: 'text'
+  .field
+    = f.label :password_confirmation, class: 'sb-title'
+    %br/
+    = f.password_field :password_confirmation, autocomplete: "new-password", class: 'text'
+  .actions
+    = f.submit "Submit", class: 'btn-primary-up'
+    
