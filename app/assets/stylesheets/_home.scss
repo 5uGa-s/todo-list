@@ -1,11 +1,88 @@
 @charset "utf-8";
 @import './variables';
 
-.sign-title {
-  color: $text-base-color;
-  font-family: Avenir;
+
+.boards-title {
   font-size: 26px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
+  padding-top: 70px;
+  padding-bottom: 10px;
+  padding-left: 20px;
 }
+
+.board {
+
+  &-title {
+    float: left;
+    color: $text-base-color;
+    font-family: Avenir;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 15px;
+    padding-top: 20px;
+    margin: 0;
+  }
+
+  &-sbtitle {
+
+    color: $text-base-color;
+    font-family: Avenir;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 18px 0 0 15px;
+    margin: 0;
+    opacity: 0.6;
+  }
+
+  &-card {
+    width: 323px;
+    height: 150px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #F4F4F4;
+    margin:0 17px;
+  }
+
+  &-img {
+    display: flex;
+    padding-top: 28px;
+    margin-left: 280px;
+  }
+
+  &-add {
+    width: 323px;
+    height: 150px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    margin:30px 17px 0 17px;
+    border: 1px dashed #969696;
+    background-color: #fff;
+  }
+}
+
+.add-text {
+  color: $text-base-color;
+  text-align: center;
+  font-family: Avenir;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-top: 45px;
+}
+
+.user_avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  position: absolute;
+  top: 262px;
+  left: 42px;
+}
+
+
+
+
