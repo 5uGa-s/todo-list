@@ -1,0 +1,10 @@
+@charset "utf-8"; 
+@import 'variables';
+
+.dropdown-content a:hover {
+  background-color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

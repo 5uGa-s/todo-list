@@ -2,6 +2,8 @@
 @import './variables';
 
 
+/* All Boards　画面*/
+
 .boards-title {
   font-size: 26px;
   padding-top: 70px;
@@ -25,14 +27,14 @@
   }
 
   &-sbtitle {
-
+    display: inline-block;
     color: $text-base-color;
     font-family: Avenir;
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    padding: 18px 0 0 15px;
+    padding: 9px 0 0 15px;
     margin: 0;
     opacity: 0.6;
   }
@@ -47,9 +49,10 @@
   }
 
   &-img {
-    display: flex;
-    padding-top: 28px;
-    margin-left: 280px;
+    cursor: pointer;
+    position: relative;
+    top: 17px;
+    left: 198px;
   }
 
   &-add {
@@ -62,6 +65,8 @@
     background-color: #fff;
   }
 }
+
+/* Add new board 部分 */
 
 .add-text {
   color: $text-base-color;
@@ -83,6 +88,56 @@
   left: 42px;
 }
 
+/* ドロップダウンボタン*/
 
+.dropdown {
+  
+  &-content {
+    display: none;
+    float: right;
+    margin: 40px 20px 0 0;
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+
+  &-content ul {
+    list-style:none;
+  }
+
+  &-text1 {
+    display: block;
+    position: absolute;
+    top: 209px;
+    right: 67px;
+    line-height: 20px;
+    color: $text-base-color;
+    font-family: Avenir;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 5px;
+    text-decoration: none;
+  }
+
+  &-text2 {
+    display: block;
+    position: absolute;
+    top: 230px;
+    right: 59px;
+    line-height: 20px;
+    color: $text-base-color;
+    font-family: Avenir;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 5px;
+    text-decoration: none;
+  }
+}
 
 

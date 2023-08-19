@@ -1,0 +1,17 @@
+.boards-container
+  %h2.boards-title All Boards
+  .board-card
+    %p.board-title Brackets
+    .article_detail_actions
+      .dropdown
+        = image_tag 'Combined Shape.svg', class: 'board-img'
+        .dropdown-content
+          %ul 
+            %li
+              = link_to "Edit", edit_user_registration_path(id: dropdown.id)
+            %li
+              = link_to "Delete", new_user_registration_path(id: dropdown.id)
+    %p.board-sbtitle Saving money – is something we would all like.
+    = image_tag 'hawaii.png', class: 'user_avatar'
+  .board-add
+    %p.add-text + Add new borad
