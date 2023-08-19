@@ -1,10 +1,6 @@
 @charset "utf-8";
 @import 'variables';
 
-* {
-  margin: 0;
-  padding: 0;
-}
 
 .btn-primary {
   color: #fff;
@@ -19,7 +15,7 @@
   border-radius: 4px;
   background: #F8BD1C;
   border: none;
-  margin: 390px 0 0 28px;
+  margin: 402px 0 0 20px;
   
   &-up {
     color: #fff;
@@ -34,7 +30,7 @@
     border-radius: 4px;
     background: #F8BD1C;
     border: none;
-    margin: 286px 0 0 28px;
+    margin: 306px 0 0 20px;
   }
 }
   
