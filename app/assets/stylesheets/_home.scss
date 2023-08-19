@@ -67,15 +67,26 @@
 
 /* Add new board 部分 */
 
-.add-text {
-  color: $text-base-color;
-  text-align: center;
-  font-family: Avenir;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  padding-top: 45px;
+.add {
+
+  &-text {
+    text-align: center;
+    font-family: Avenir;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 45px;
+  }
+
+  &-btn {
+    text-decoration: none;
+    color: $text-base-color;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 }
 
 .user_avatar {
@@ -125,7 +136,7 @@
     text-decoration: none;
 
     &:hover {
-      opacity: 0.6;
+      opacity: 0.5;
     }
   }
 
@@ -142,7 +153,7 @@
     text-decoration: none;
 
     &:hover {
-      opacity: 0.6;
+      opacity: 0.5;
     }
   }
 }
