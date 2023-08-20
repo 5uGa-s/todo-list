@@ -32,5 +32,24 @@
     border: none;
     margin: 306px 0 0 20px;
   }
+
+  &-new {
+    color: #fff;
+    font-family: Avenir;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    width: 319px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #F8BD1C;
+    border: none;
+    margin: 243px 0 0 20px;
+  }
 }
-  
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

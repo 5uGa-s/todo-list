@@ -4,87 +4,114 @@
 
 /* All Boards　画面*/
 
-.boards-title {
-  font-size: 26px;
-  padding-top: 70px;
-  padding-bottom: 10px;
-  padding-left: 20px;
+.boards {
+  &-container {
+    margin: 0 15px;
+  }
+
+  &-title {
+    font-size: 26px;
+    padding-top: 65px;
+    padding-left: 6px;
+  }
 }
+
 
 .board {
 
+  &-card {
+    display: block;
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background-color: #F4F4F4;
+  }
+
   &-title {
-    float: left;
+    display: inline-block;
     color: $text-base-color;
     font-family: Avenir;
-    font-size: 18px;
+    font-size: 19px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    padding-left: 15px;
-    padding-top: 20px;
+    padding-left: 20px;
+    padding-top: 12px;
     margin: 0;
+    word-wrap: break-all;
+    width: 250px;
   }
 
   &-sbtitle {
     display: inline-block;
     color: $text-base-color;
     font-family: Avenir;
-    font-size: 13px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin: 10px 0 0 15px;
     opacity: 0.6;
-  }
-
-  &-card {
-    width: 323px;
-    height: 150px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    background: #F4F4F4;
-    margin:0 17px;
+    word-wrap: break-all;
+    padding: 5px 17px 10px 20px;
+    margin: 0;
   }
 
   &-img {
-    display: inline-block;
-    position: relative;
-    top: 17px;
+    float: right;
+    position: absolute;
+    top: 23px;
     left: 280px;
   }
 
+
+/*  Add  new  board  部分  */
+
   &-add {
-    width: 323px;
+    width: 100%;
     height: 150px;
+    position: relative;
     flex-shrink: 0;
     border-radius: 10px;
-    margin:30px 17px 0 17px;
+    margin:30px 0 0 0;
     border: 1px dashed #969696;
     background-color: #fff;
   }
 }
 
-/* Add new board 部分 */
+.add {
 
-.add-text {
-  color: $text-base-color;
-  text-align: center;
-  font-family: Avenir;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  padding-top: 45px;
+  &-text {
+    display: inline-block;
+    font-family: Avenir;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 45px;
+    padding-left: 90px;
+  }
+
+  &-btn {
+    text-decoration: none;
+    color: $text-base-color;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 }
 
+/* ユーザーの画像*/
+
 .user_avatar {
+  display: inline-block;
+  position: relative;
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  position: absolute;
-  top: 262px;
-  left: 42px;
+  margin-left: 21px;
+  margin-bottom: 10px;
 }
 
 /* ドロップダウンボタン*/
@@ -95,10 +122,9 @@
   
   &-content {
     display: none;
-    float: right;
-    margin: 40px 0 0 233px;
     width: 60px;
     height: 60px;
+    margin: 35px 0 0 260px;
     flex-shrink: 0;
     border-radius: 4px;
     background-color: #fff;
@@ -125,7 +151,7 @@
     text-decoration: none;
 
     &:hover {
-      opacity: 0.6;
+      opacity: 0.5;
     }
   }
 
@@ -142,7 +168,7 @@
     text-decoration: none;
 
     &:hover {
-      opacity: 0.6;
+      opacity: 0.5;
     }
   }
 }
