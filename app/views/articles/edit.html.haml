@@ -1,1 +1,13 @@
-%p Edit page 
+.new-container
+  %h2.title New Board
+  = form_with(model: @article, url: article_path(@article), method: 'put', local: true ) do |f|
+    .new-title
+      = f.label :title, 'Title', class: 'sb-title'
+    .new-title-form
+      = f.text_field :title, class: 'text'
+    .new-title
+      = f.label :content, 'Description', class: 'sb-title'
+    .new-text-form
+      = f.text_area :content, class: 'content-form'
+    .actions
+      = f.submit "Submit", class: 'btn-primary-new'
