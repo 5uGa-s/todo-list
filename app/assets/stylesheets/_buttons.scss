@@ -48,7 +48,8 @@
     border: none;
     margin: 243px 0 0 20px;
   }
-
-
 }
-  
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
