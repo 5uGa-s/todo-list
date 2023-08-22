@@ -62,6 +62,10 @@
     position: absolute;
     top: 23px;
     left: 280px;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 
 
