@@ -1,14 +1,15 @@
 .boards-container
   %h2.boards-title All Boards
-  .article_detail_actions
-    .dropdown
-      = image_tag 'Combined Shape.svg', class: 'board-img'
-      .dropdown-content
-        %ul 
-          %li
-            = link_to "Edit", edit_article_path(@article), class: 'dropdown-text1'
-          %li
-            = link_to "Delete", article_path(@article), method: 'delete', data: {confirm: '本当に削除してよろしいですか？'}, class: 'dropdown-text2'
+  - if user_signed_in?
+    .article_detail_actions
+      .dropdown
+        = image_tag 'Combined Shape.svg', class: 'board-img'
+        .dropdown-content
+          %ul 
+            %li
+              = link_to "Edit", edit_article_path(@article), class: 'dropdown-text1'
+            %li
+              = link_to "Delete", article_path(@article), method: 'delete', data: {confirm: '本当に削除してよろしいですか？'}, class: 'dropdown-text2'
   .board-card
     %p.board-title Brackets
     %br
