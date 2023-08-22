@@ -2,7 +2,7 @@
 @import './variables';
 
 
-/* All Boards　画面*/
+/* All Boards  画面*/
 
 .boards {
   &-container {
@@ -37,7 +37,7 @@
     font-weight: 400;
     line-height: normal;
     padding-left: 20px;
-    padding-top: 28px;
+    padding-top: 18px;
     margin: 0;
     word-wrap: break-all;
     width: 250px;
@@ -60,7 +60,7 @@
   &-img {
     float: right;
     position: absolute;
-    top: 23px;
+    top: 27px;
     left: 280px;
 
     &:hover {
@@ -122,13 +122,13 @@
 
 .dropdown {
   position: absolute;
-  z-index: 99;
+  z-index: 999;
   
   &-content {
     display: none;
     width: 60px;
     height: 60px;
-    margin: 35px 0 0 260px;
+    margin: 39px 0 0 260px;
     flex-shrink: 0;
     border-radius: 4px;
     background-color: #fff;
@@ -178,3 +178,6 @@
 }
 
 
+.dropdown:hover .dropdown-content {
+  display: block;
+}
