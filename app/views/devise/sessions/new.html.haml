@@ -1,3 +1,4 @@
+.error-message= flash.now[:error]
 %h2.title Sign in
 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
   .field
@@ -8,7 +9,8 @@
     = f.label :password, class: 'sb-title'
     %br/
     = f.password_field :password, autocomplete: "current-password", class: 'text'
-
-  .actions
-    = f.submit "Submit", class: 'btn-primary'
+  %p.message
+    = link_to "パスワードをお忘れですか？", edit_user_registration_path, class: 'forget-pass'
+.actions
+  = f.submit "Submit", class: 'btn-primary'
 

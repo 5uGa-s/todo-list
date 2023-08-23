@@ -16,9 +16,10 @@ class ArticlesController < ApplicationController
   def create
     @article = current_user.articles.build(article_params)
     if @article.save
-      redirect_to article_path(@article), notice: '保存出来ました。'
+      redirect_to article_path(@article)
+      flash[:notice] = '⚪︎保存出来ました。'
     else
-      flash.now[:error] = '保存出来ませんでした。'
+      flash.now[:error] = '⚪︎ﾀｲﾄﾙは2字以上20字以内、内容3字以上入力して下さい。'
       render :new
     end
   end
@@ -31,7 +32,9 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     if  @article.update(article_params)
       redirect_to article_path(@article)
+      flash[:notice] = '⚪︎更新出来ました。'
     else
+      flash.now[:error] = '⚪︎更新出来ませんでした。'
       render :edit
     end
   end
@@ -40,6 +43,7 @@ class ArticlesController < ApplicationController
     article = Article.find(params[:id])
     article.destroy!
     redirect_to root_path
+    flash[:notice] = '⚪︎削除出来ました。'
   end
 
   private
