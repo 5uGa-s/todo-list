@@ -8,6 +8,8 @@
     = f.label :password, class: 'sb-title'
     %br/
     = f.password_field :password, autocomplete: "current-password", class: 'text'
+  %p.message
+    = link_to "パスワードをお忘れですか？", new_password_reset_path(resource_name), class: 'forget-pss'
 
   .actions
     = f.submit "Submit", class: 'btn-primary'

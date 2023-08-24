@@ -14,7 +14,13 @@
     %header.header
       .header-title
         %p.header-text Boards
-      .header-img
-        = image_tag 'opan.png', class: 'header_avatar'
+        .article_detail_actions
+          .dropdown-btn
+            .header-img
+              = image_tag 'opan.png', class: 'header_avatar'
+              .dropdown-wrapper
+                %ul
+                  %li= link_to "Login", new_user_session_path(@article), class: 'dropdown-login'
+                  %li= link_to "Logout", root_path, class: 'dropdown-logout'
       .line
     = yield

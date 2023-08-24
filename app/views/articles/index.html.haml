@@ -1,21 +1,13 @@
-.boards-container
-  %h2.boards-title All Boards
-  - if user_signed_in?
-    .article_detail_actions
-      .dropdown
-        = image_tag 'Combined Shape.svg', class: 'board-img'
-        .dropdown-content
-          %ul 
-            %li
-              = link_to "Edit", edit_article_path(@article), class: 'dropdown-text1'
-            %li
-              = link_to "Delete", article_path(@article), method: 'delete', data: {confirm: '本当に削除してよろしいですか？'}, class: 'dropdown-text2'
-  .board-card
-    %p.board-title Brackets
-    %br
-    %p.board-sbtitle Saving money – is something we would all like.
-    %br
-    = image_tag 'hawaii.png', class: 'user_avatar'
-  .board-add
-    %p.add-text
-      = link_to "+ Add new borad", new_article_path(@article), class: 'add-btn'
+.check
+  .boards-container
+    %h2.boards-title All Boards
+    - @articles.each do |article|
+      .board-card
+        %p.board-title= article.title
+        %br
+        %p.board-sbtitle= article.content
+        %br
+        .image-tag
+          = image_tag 'hawaii.png', class: 'user_avatar'
+
+
