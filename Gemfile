@@ -28,6 +28,7 @@ gem 'erb2haml'
 gem 'haml-rails'
 gem 'pry-byebug'
 gem 'rubocop-rails'
+gem 'jquery-rails'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
