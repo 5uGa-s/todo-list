@@ -16,13 +16,13 @@ require("channels")
 $(document).ready(function() {
   setTimeout(function() {
     $('.notice').fadeOut('slow');
-  }, 2000);
+  }, 1000);
 });
 
 $(document).ready(function() {
   setTimeout(function() {
     $('.error-message').fadeOut('slow');
-  }, 3000);
+  }, 2000);
 });
 
 // Uncomment to copy all static images under ../images to the output folder and reference

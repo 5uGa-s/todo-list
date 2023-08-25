@@ -8,6 +8,8 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %link{ href: "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel: "stylesheet" }
+
   %body
     %p.notice= notice
     %p.alert= alert
@@ -20,7 +22,8 @@
               = image_tag 'opan.png', class: 'header_avatar'
               .dropdown-wrapper
                 %ul
-                  %li= link_to "Login", new_user_session_path(@article), class: 'dropdown-login'
+                  %li= link_to "Login", new_user_registration_path, class: 'dropdown-login'
                   %li= link_to "Logout", root_path, class: 'dropdown-logout'
       .line
+    .error-message= flash.now[:error]
     = yield
