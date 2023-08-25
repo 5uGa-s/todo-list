@@ -20,7 +20,7 @@ class ArticlesController < ApplicationController
     if @article.save
       redirect_to article_path(@article), notice: '⚪︎保存出来ました。'
     else
-      flash.now[:error] = '⚪︎保存出来ませんでした。'
+      flash.now[:error] = '⚪ﾀｲﾄﾙは2字以上20字以内、内容は3字以上入力して下さい。'
       render :new
     end
   end

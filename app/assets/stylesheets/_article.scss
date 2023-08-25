@@ -11,7 +11,7 @@
 
   &-title {
     font-size: 26px;
-    padding-top: 85px;
+    padding-top: 80px;
     padding-left: 6px;
   }
 }
@@ -73,28 +73,33 @@
 /*  Add  new  board  部分  */
 
   &-add {
-    width: 100%;
-    height: 150px;
-    position: relative;
+    position: fixed;
+    width: 163px;
+    height: 55px;
+    bottom: 16px;
+    right: 15px;
     flex-shrink: 0;
     border-radius: 10px;
-    margin:30px 0 0 0;
     border: 1px dashed #969696;
     background-color: #fff;
+    box-shadow: 0px 2px 8px rgba(7, 7, 7, 0.25);
+    z-index: 9999;
+    opacity: 0.8;
   }
 }
+
 
 .add {
 
   &-text {
     display: inline-block;
     font-family: Avenir;
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    padding-top: 45px;
-    padding-left: 90px;
+    padding-top: 2px;
+    padding-left: 18px;
   }
 
   &-btn {
