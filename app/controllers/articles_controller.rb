@@ -2,13 +2,15 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:show]
   before_action :authenticate_user!, only:[:new, :create, :edit, :update, :destroy]
 
+  def set_article
+    @article = current_user.articles.find(params[:id])
+  end
+
   def index
     @articles = Article.all
   end
 
   def show
-    @article = Article.find(params[:id])
-    set_article(@article)
   end
 
   def new
@@ -53,8 +55,6 @@ class ArticlesController < ApplicationController
     params.require(:article).permit(:title, :content)
   end
 
-  def set_article(article)
-    @current_article = article
-  end
+
 
 end
