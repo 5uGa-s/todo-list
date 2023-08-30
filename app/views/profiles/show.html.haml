@@ -11,9 +11,11 @@
       %br
         .profilePage_user_gender
           #{I18n.t("enum.genders.#{current_user.gender}")}
-      %br
         .profilePage_user_birthday
           #{current_user.birthday}
 
       .profilePage_user_introduction
         = current_user.profile&.introduction
+    
+- current_user.articles.each do |article|
+  =render 'commons/article', article: article
