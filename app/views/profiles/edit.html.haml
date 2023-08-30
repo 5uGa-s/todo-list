@@ -1,0 +1,28 @@
+.container
+  %ul
+    - @profile.errors.full_messages.each do |message|
+      %li= message
+  = form_with(model: @profile, url: profile_path, method: 'put', local: true) do |f|
+    %div.profile
+    %div
+      = f.label :avatar, 'Avatar', class: 'sb-title'
+    %div
+      = f.file_field :avatar, class: 'pr-avatar'
+    %div
+      = f.label :nickname, 'Handle Name', class: 'sb-title'
+    %div
+      = f.text_field :nickname, class: 'text'
+    %div
+      = f.label :introduction, 'Self-Introduction', class: 'sb-title'
+    %div
+      = f.text_area :introduction, class: 'pr-content-form'
+    %div
+      = f.label :gender, 'Gender', class: 'sb-title'
+    %div
+      = f.select :gender, [['男性', 'male'], ['女性', 'female'], ['その他', 'other']], {}, {class: 'pr-text'}
+    %div
+      = f.label :birthday, 'Birthday', class: 'sb-title'
+    %div
+      = f.date_field :birthday, class: 'text'
+    %div
+      = f.submit 'Submit', class: 'btn-primary-pr'

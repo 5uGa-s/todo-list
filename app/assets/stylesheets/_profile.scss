@@ -1,0 +1,83 @@
+@import './variables';
+
+
+.profilePage {
+  margin-top: 130px;
+
+  &_user {
+    display: block;
+
+    &_image {
+      display: block;
+      text-align: center;
+      margin-bottom: 6px;
+
+      img {
+        width: 130px;
+        height: 130px;
+      }
+    }
+
+    &_basicInfo {
+      margin-left: 16px;
+    }
+
+    &_actionButton {
+      position: absolute;
+      top: 77px;
+      right: 18px;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 10px;
+      border-style: dotted;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 3px 8px;
+
+      a {
+        color: $text-base-color;
+        text-decoration: none;
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+
+    &_name {
+      display: block;
+      position: relative;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    &_displayName {
+      display: block;
+      font-size: 27px;
+      font-weight: bold;
+    }
+
+    &_gender {
+      display: block;
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+
+    &_birthday {
+      display: block;
+      font-size: 15px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+
+
+    &_introduction {
+      font-size: 19px;
+      text-align: center;
+      margin: 0  15px 0 5px;
+    }
+  }
+}

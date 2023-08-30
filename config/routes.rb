@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   root to: 'articles#index'
   resources :articles, only: [:show, :new, :create, :edit, :update, :destroy]
   resources :password_resets, only: [:new, :create, :edit, :update]
+  resource :profile, only: [:show, :edit, :update]
 end
