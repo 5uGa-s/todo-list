@@ -19,10 +19,10 @@
         .article_detail_actions
           .dropdown-btn
             .header-img
-              = image_tag 'opan.png', class: 'header_avatar'
+              = image_tag current_user.avatar_image, class: 'header_avatar'
               .dropdown-wrapper
                 %ul
-                  %li= link_to "Login", new_user_registration_path, class: 'dropdown-login'
+                  %li= link_to "Profile", profile_path, class: 'dropdown-profile'
                   %li= link_to "Logout", root_path, class: 'dropdown-logout'
       .line
     .error-message= flash.now[:error]

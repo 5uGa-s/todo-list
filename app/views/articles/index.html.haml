@@ -19,7 +19,7 @@
             %br
             %p.board-time= article.display_created_at
             .image-tag
-              = image_tag 'hawaii.png', class: 'user_avatar'
+              = image_tag article.user.avatar_image, class: 'user_avatar'
           .board-add
             %p.add-text
               = link_to "+ Add new borad", new_article_path, class: 'add-btn'
