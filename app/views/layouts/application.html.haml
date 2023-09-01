@@ -15,15 +15,22 @@
     %p.alert= alert
     %header.header
       .header-title
-        %p.header-text Boards
+        - if !current_page?(root_path)
+          = link_to :back do
+            = image_tag 'yajirushi.png', class: 'header-back'
+        = link_to "Boards", root_path, class: 'header-text'
         .article_detail_actions
           .dropdown-btn
             .header-img
+            - if user_signed_in?
               = image_tag current_user.avatar_image, class: 'header_avatar'
               .dropdown-wrapper
                 %ul
-                  %li= link_to "Profile", profile_path, class: 'dropdown-profile'
-                  %li= link_to "Logout", root_path, class: 'dropdown-logout'
+                  - if current_user
+                    %li= link_to "Profile", profile_path, class: 'dropdown-profile'
+                    %li= link_to "Logout", root_path, class: 'dropdown-logout'
+                  - else 
+                    %li= link_to "Sign up", new_user_session_path, class: 'dropdown-profile'
+                    %li= link_to "Sign out", root_path, class: 'dropdown-logout'
       .line
-    .error-message= flash.now[:error]
     = yield

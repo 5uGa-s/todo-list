@@ -2,18 +2,25 @@
 @import 'variables';
 
 .notice {
+  position: absolute;
   font-size: 13px;
   color: rgb(112, 111, 111);
-  float: left;
-  margin-top: 30px;
-  margin-left: 15px;
+  top: 60px;
+  left: 15px;
 }
 
 .error-message {
+  position: absolute;
   color: #e81c1cdd;
   float: left;
   font-size: 13px;
-  margin-left: 0;
+  top: 70px;
 }
 
-
+.alert {
+  position: absolute;
+  font-size: 13px;
+  color: #e81c1cdd;
+  top: 60px;
+  left: 15px;
+}

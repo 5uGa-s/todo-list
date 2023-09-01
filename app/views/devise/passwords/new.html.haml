@@ -1,12 +1,13 @@
+.error-message= flash.now[:error]
 %h2 Forgot your password?
 = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
   = render "devise/shared/error_messages", resource: resource
   .field
-    = f.label :email
+    = f.label :email, class: 'pass-sb-title'
     %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
+    = f.email_field :email, autofocus: true, autocomplete: "email", class: 'pass-text'
   .actions
-    = f.submit "Send me reset password instructions"
+    = f.submit "Submit", class: 'btn-primary-mail'
 = render "devise/shared/links"
 
 

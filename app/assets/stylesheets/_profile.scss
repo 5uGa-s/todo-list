@@ -1,17 +1,16 @@
 @import './variables';
 
-.container {
-  margin: 0 15px;
-}
+
 
 .profilePage {
-  margin-top: 120px;
 
   &_user {
     display: block;
 
     &_image {
       display: block;
+      position: relative;
+      top: 105px;
       text-align: center;
 
       img {
@@ -50,8 +49,8 @@
     &_name {
       display: block;
       position: relative;
-      margin-bottom: 11px;
-      margin-top: 18px;
+      margin-bottom: 12px;
+      margin-top: 115px;
       text-align: center;
     }
 
@@ -63,7 +62,6 @@
 
     &_gender {
       float: left;
-      position: relative;
       font-size: 18px;
       padding-left: 80px;
       color: #767575;
@@ -73,14 +71,14 @@
       float: right;
       position: relative;
       font-size: 17px;
-      padding-right: 80px;
+      padding-right: 90px;
       color: #767575;
     }
 
     &_introduction {
       font-size: 20px;
       text-align: center;
-      margin: 60px  0 30px 0;
+      margin: 65px  15px 30px 0;
     }
   }
 }

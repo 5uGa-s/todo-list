@@ -11,17 +11,26 @@
   background-color: #fff;
   z-index: 9999;
 
+  &-text {
+    text-decoration: none;
+    color: $text-base-color;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
   &-title {
-    display: block;
-    float: left;
+    display: flex;
+    position: relative;
+    left: 45px;
     color: $text-base-color;
     font-family: Avenir;
-    font-size: 18px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     margin-top: 17px;
-    margin-left: 30px;
     height: 41px;
     z-index: 999;
   }
@@ -32,12 +41,22 @@
 
   &_avatar {
     display: flex;
-    width: 40px;
-    height: 40px;
+    position: relative;
+    width: 39px;
+    height: 39px;
     flex-shrink: 0;
-    margin-top: -32px;
-    margin-left: 290px;
+    margin-top: -7px;
+    margin-left: 200px;
     border-radius: 100%;
+  }
+
+  &-back {
+    position: relative;
+    margin-top: 4px;
+    margin-left: -30px;
+    margin-right: 18px;
+    width: 17px;
+    height: 17px;
   }
   
 }
