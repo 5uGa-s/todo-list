@@ -20,10 +20,10 @@ class ArticlesController < ApplicationController
   def create
     @article = current_user.articles.build(article_params)
     if @article.save
-      redirect_to article_path(@article)
       flash[:notice] = '⚪︎保存出来ました。'
+      redirect_to article_path(@article)
     else
-      flash.now[:error] = '⚪ﾀｲﾄﾙは2字以上20字以内、内容は3字以上入力して下さい。'
+      flash.now[:error] = '⚪ﾀｲﾄﾙは1字以上20字以内、内容は3字以上入力して下さい。'
       render :new
     end
   end
@@ -35,8 +35,8 @@ class ArticlesController < ApplicationController
   def update
     @article = current_user.articles.find(params[:id])
     if  @article.update(article_params)
-      redirect_to article_path(@article)
       flash[:notice] = '⚪︎更新出来ました。'
+      redirect_to article_path(@article)
     else
       flash.now[:error] = '⚪︎更新出来ませんでした。'
       render :edit
@@ -46,8 +46,8 @@ class ArticlesController < ApplicationController
   def destroy
     article = current_user.articles.find(params[:id])
     article.destroy!
-    redirect_to root_path
     flash[:notice] = '⚪︎削除出来ました。'
+    redirect_to root_path
   end
 
   private
