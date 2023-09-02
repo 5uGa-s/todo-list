@@ -17,6 +17,7 @@
         width: 150px;
         height: 150px;
         border-radius: 100%;
+        margin-bottom: 23px;
       }
     }
 
@@ -49,9 +50,9 @@
     &_name {
       display: block;
       position: relative;
-      margin-bottom: 12px;
       margin-top: 115px;
       text-align: center;
+      line-height: 13px;
     }
 
     &_displayName {
@@ -63,22 +64,30 @@
     &_gender {
       float: left;
       font-size: 18px;
-      padding-left: 80px;
+      padding-left: 83px;
       color: #767575;
+      line-height: 1px;
     }
 
     &_birthday {
       float: right;
       position: relative;
       font-size: 17px;
-      padding-right: 90px;
+      padding-right: 88px;
       color: #767575;
+      line-height: 1px;
     }
 
     &_introduction {
       font-size: 20px;
       text-align: center;
-      margin: 65px  15px 30px 0;
+      margin: 0 15px 30px 0;
+      line-height: 29px;
+
+      p {
+        margin: 0;
+        padding-top: 15px;
+      }
     }
   }
 }

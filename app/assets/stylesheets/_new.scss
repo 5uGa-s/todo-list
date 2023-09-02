@@ -1,13 +1,18 @@
 @charset "utf-8";
 @import 'variables';
 
+.new-container {
+  margin: 0 10px;
+}
+
 .content-form {
-  width: 313px;
-  height: 190px;
+  width: 298px;
+  height: 168px;
+  font-size: 15px;
   flex-shrink: 0;
   border-radius: 10px;
   background: #F4F4F4;
   border: none;
-  padding-left: 10px;
-  margin: 1px 0 30px 5px;
+  padding: 10px;
+  margin: 1px 0 0 11px;
 }

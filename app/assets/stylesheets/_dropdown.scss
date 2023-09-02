@@ -125,6 +125,41 @@
       opacity: 0.5;
     }
   }
+
+  &-signup {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: $text-base-color;
+    font-family: Avenir;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &-signin {
+    display: block;
+    margin-top: 8px;
+    margin-left: 12px;
+    color: $text-base-color;
+    font-family: Avenir;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
 }
 
 

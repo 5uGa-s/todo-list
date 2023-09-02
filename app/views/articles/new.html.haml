@@ -1,5 +1,5 @@
 .error-message= flash.now[:error]
-.container
+.new-container
   %h2.title New Board
   = form_with(model: @article, url: articles_path , method: 'post', local: true ) do |f|
     .new-title

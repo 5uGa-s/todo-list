@@ -9,6 +9,7 @@
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     %link{ href: "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel: "stylesheet" }
+    %script{src: "https://code.jquery.com/jquery-3.6.0.min.js"}
 
   %body
     %p.notice= notice
@@ -22,15 +23,16 @@
         .article_detail_actions
           .dropdown-btn
             .header-img
-            - if user_signed_in?
-              = image_tag current_user.avatar_image, class: 'header_avatar'
-              .dropdown-wrapper
-                %ul
-                  - if current_user
-                    %li= link_to "Profile", profile_path, class: 'dropdown-profile'
-                    %li= link_to "Logout", root_path, class: 'dropdown-logout'
-                  - else 
-                    %li= link_to "Sign up", new_user_session_path, class: 'dropdown-profile'
-                    %li= link_to "Sign out", root_path, class: 'dropdown-logout'
+              - if user_signed_in?
+                = image_tag current_user.avatar_image, class: 'header_avatar'
+                .dropdown-wrapper
+                  %li= link_to "Profile", profile_path, class: 'dropdown-profile'
+                  %li= link_to "Logout", destroy_user_session_path, method: :delete, class: 'dropdown-logout'
+              -else
+                = image_tag 'profile-img', class: 'header_avatar'
+                .dropdown-wrapper
+                  %ul
+                    %li= link_to "Sign up", new_user_registration_path, class: 'dropdown-signup'
+                    %li= link_to "Sign in", new_user_session_path, class: 'dropdown-signin'
       .line
     = yield

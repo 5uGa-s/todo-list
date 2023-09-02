@@ -17,6 +17,9 @@
   }
 }
 
+.image-tag {
+  line-height: 0;
+}
 
 .board {
 
@@ -33,7 +36,7 @@
   &-name {
     display: inline-block;
     position: relative;
-    top: 31px;
+    top: 24px;
     padding-left: 65px;
     font-size: 12px;
     margin: 0;
@@ -42,7 +45,7 @@
   &-time {
     display: inline-block;
     position: relative;
-    top: 32px;
+    top: 13px;
     font-size: 10px;
     padding-left: 65px;
     margin: 0;
@@ -56,7 +59,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    padding: 12px 0 10px 20px;
+    padding: 16px 0 10px 20px;
     margin: 0;
     word-wrap: break-all;
     word-break: break-all;
@@ -76,6 +79,7 @@
     word-wrap: break-all;
     padding: 0 17px 0 20px;
     margin: 0;
+    white-space: pre-wrap; 
   }
 
   &-img {
@@ -134,19 +138,14 @@
 /* ユーザーの画像*/
 
 .user_avatar {
-  display: inline-block;
+  display: block;
   position: relative;
   width: 30px;
   height: 30px;
   border-radius: 100%;
   margin-left: 21px;
-  margin-bottom: 10px;
+  bottom: 20px;
 }
 
 
-br {
-  display: block;
-  content: "";
-  margin: -10px 0;
-}
 

@@ -15,7 +15,7 @@
           #{current_user.birthday}
 
       .profilePage_user_introduction
-        = current_user.profile&.introduction
+        = simple_format(current_user.profile&.introduction)
     
 - current_user.articles.each do |article|
   =render 'commons/article', article: article
