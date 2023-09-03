@@ -1,7 +1,9 @@
 .error-message= flash.now[:error]
 .new-container
   %h2.title New Board
-  = form_with(model: @article, url: articles_path , method: 'post', local: true ) do |f|
+  = form_with(model: @article, url: articles_path , method: 'post', local: true, html: { multipart: true } ) do |f|
+    .new-image-form
+    = f.file_field :image, class: 'file-field'
     .new-title
       = f.label :title, 'Title', class: 'sb-title'
     .new-title-form
