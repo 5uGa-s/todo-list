@@ -11,6 +11,9 @@
             %li
               = link_to "Delete", article_path(@article), method: 'delete', data: {confirm: '本当に削除してよろしいですか？'}, class: 'dropdown-text2'
       .board-card
+        - if @article.image.attached?
+          .image-tag
+            = image_tag @article.image 
         %p.board-title= @article.title
         %br
         %p.board-sbtitle= @article.content

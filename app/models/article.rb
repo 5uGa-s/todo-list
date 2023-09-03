@@ -23,6 +23,7 @@ class Article < ApplicationRecord
   validates :content, uniqueness: true
 
   belongs_to :user
+  has_one_attached :image
 
   def display_created_at
     I18n.l(self.created_at, format: :default)

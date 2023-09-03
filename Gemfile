@@ -30,6 +30,8 @@ gem 'haml-rails'
 gem 'pry-byebug'
 gem 'rubocop-rails'
 gem 'jquery-rails'
+gem 'image_processing', '~> 1.10' # 画像処理のため
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
