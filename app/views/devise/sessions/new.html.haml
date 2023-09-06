@@ -1,20 +1,21 @@
-.error-message= flash.now[:error]
-%h2.title Sign in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email, class: 'pass-sb-title'
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email", class: 'pass-text'
-  .field
-    = f.label :password, class: 'pass-sb-title'
-    %br/
-    = f.password_field :password, autocomplete: "current-password", class: 'pass-text'
-  - if devise_mapping.rememberable?
+.container
+  .error-message= flash.now[:error]
+  %h2.title Sign in
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    = render "devise/shared/error_messages", resource: resource
     .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Submit", class: 'btn-primary-in'
-= render "devise/shared/links"
+      = f.label :email, class: 'pass-sb-title'
+      %br/
+      = f.email_field :email, autofocus: true, autocomplete: "email", class: 'pass-text'
+    .field
+      = f.label :password, class: 'pass-sb-title'
+      %br/
+      = f.password_field :password, autocomplete: "current-password", class: 'pass-text'
+    - if devise_mapping.rememberable?
+      .field
+        = f.check_box :remember_me
+        = f.label :remember_me
+    .actions
+      = f.submit "Submit", class: 'btn-primary-in'
+  = render "devise/shared/links"
 

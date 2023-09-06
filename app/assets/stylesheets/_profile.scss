@@ -52,6 +52,7 @@
       position: relative;
       margin-top: 115px;
       text-align: center;
+      margin-right: 10px;
       line-height: 13px;
     }
 
@@ -64,18 +65,18 @@
     &_gender {
       float: left;
       font-size: 18px;
-      padding-left: 83px;
+      padding-left: 93px;
       color: #767575;
-      line-height: 1px;
+      line-height: 5px;
     }
 
     &_birthday {
       float: right;
       position: relative;
       font-size: 17px;
-      padding-right: 88px;
+      padding-right: 93px;
       color: #767575;
-      line-height: 1px;
+      line-height: 5px;
     }
 
     &_introduction {
@@ -87,6 +88,7 @@
       p {
         margin: 0;
         padding-top: 15px;
+        margin-top: 20px;
       }
     }
   }

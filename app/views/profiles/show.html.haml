@@ -9,6 +9,7 @@
         .profilePage_user_displayName
           #{current_user.display_name} 
       %br
+      - if current_user.gender.present?
         .profilePage_user_gender
           #{I18n.t("enum.genders.#{current_user.gender}")}
         .profilePage_user_birthday
