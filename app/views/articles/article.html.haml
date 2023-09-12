@@ -1,0 +1,10 @@
+# app/views/articles/_article_actions_dropdown.html.haml
+.article_detail_actions
+  .dropdown
+    = image_tag 'Combined Shape.svg', class: 'board-img-show'
+    .dropdown-content
+      %ul 
+        %li
+          = link_to "Edit", edit_article_path(article), class: 'dropdown-text1'
+        %li
+          = link_to "Delete", article_path(article), method: 'delete', data: {confirm: '本当に削除してよろしいですか？'}, class: 'dropdown-text2'

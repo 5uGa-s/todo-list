@@ -1,21 +1,12 @@
 .boards-container
   - if user_signed_in? && current_user.has_written?(@article)
-    .article_detail_actions
-      .dropdown
-        = image_tag 'Combined Shape.svg', class: 'board-img-show'
-        .dropdown-content
-          %ul 
-            %li
-              = link_to "Edit", edit_article_path(@article), class: 'dropdown-text1'
-            %li
-              = link_to "Delete", article_path(@article), method: 'delete', data: {confirm: '本当に削除してよろしいですか？'}, class: 'dropdown-text2'
+    = article_actions_dropdown(@article)
 
   - if @article.title.length <= 13
     %h2.boards-title-show= @article.title
   - else
     %h2.boards-title-show= @article.title.truncate(13)
     %p.boards-title-full= @article.title
-
 
   - if @article.image.attached?
     .image-tag
@@ -27,7 +18,35 @@
     %p.board-name-show= @article.author_name
     %br
     %p.board-time-show= @article.display_created_at
+  .article
+    %h2.comments-title Comments    
+    - @comments.each do |comment|
+      .board-card-comments
 
+
+        - if user_signed_in? && current_user == comment.user
+          .article_detail_actions
+            .dropdown
+              = image_tag 'Combined Shape.svg', class: 'board-img-comment'
+              .dropdown-content-comment
+                %ul 
+                  %li
+                    = link_to "Edit", edit_article_comment_path(@article, comment), class: 'dropdown-text1'
+                  %li
+                    = link_to "Delete", article_comment_path(@article, comment), method: 'delete', data: {confirm: '本当に削除してよろしいですか？'}, class: 'dropdown-text2'
+        - else
+          .article_detail_actions
+            .dropdown
+              = image_tag 'Combined Shape.svg', class: 'board-img-comment'
+              .dropdown-content-comments
+                %ul 
+                  %li
+                    = link_to "Delete", article_comment_path(@article, comment), method: 'delete', data: {confirm: '本当に削除してよろしいですか？'}, class: 'dropdown-text3'
+        .image-tag
+          = image_tag comment.user.avatar_image, class: 'user_avatar-comments'
+        %p.comments-text= comment.content
+        %p.comments-time= comment.display_created_at
+        %p.comments-name= comment.author_name
   .board-add
-    %p.comment-text
-      = link_to "+ Add Comment", new_article_path, class: 'comment-btn'
+    %p.add-text
+      = link_to "+ Add Comments", new_article_comment_path(@article), class: 'add-btn'

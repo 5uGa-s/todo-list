@@ -15,7 +15,7 @@
     padding-top: 70px;
     padding-left: 12px;
     margin-bottom: 17px;
-    z-index: 99;
+
 
     &-show {
       font-size: 26px;
@@ -41,9 +41,6 @@
   }
 }
 
-.image-tag {
-  line-height: 0;
-}
 
 .board {
 
@@ -56,59 +53,57 @@
     flex-shrink: 0;
     border-radius: 10px;
     background-color: #F4F4F4;
-    margin: 0 10px 20px 10px;
+    margin: 0 10px -5px 10px;
     box-shadow: 0px 2px 8px rgba(7, 7, 7, 0.25);
+    text-decoration: none;
   }
 
   &-name {
-    display: inline-block;
-    position: relative;
-    top: 23px;
-    padding-left: 68px;
+    margin: 0 0 0 65px;
     font-size: 12px;
-    color: $text-base-color;
-    margin: 0;
+    font-weight: bold;
+    color: $text-sb-color;
+    line-height: 0px;
 
     &-show {
-      display: inline-block;
+      float: right;
+      display: flex;
       position: relative;
-      left: 20px;
-      font-size: 15px;
-      color: #969696;
-      padding: 15px 0 14px 0;
-      margin: 0;
+      font-size: 12px;
+      font-weight: bold;
+      color: $text-sb-color;
+      bottom: 12px;
+      margin: 10px 75px 0 0px;
+      padding-right: 7px;
+      line-height: 14px;
     }
   }
 
   &-time {
-    display: inline-block;
-    position: relative;
-    top: 12px;
-    padding-left: 68px;
-    font-size: 10px;
-    color: $text-base-color;
-    margin: 0;
+    margin: 5px 0 0 65px;
+    padding-bottom: 15px;
+    font-size: 9px;
+    color: $text-sb-color;
 
     &-show {
-      display: inline-block;
+      float: right;
+      display: flex;
       position: relative;
-      left: 20px;
-      font-size: 12px;
-      color: #969696;
-      bottom: 20px;
-      margin: 0;
+      font-size: 6px;
+      color: $text-sb-color;
+      bottom: 31px;
+      margin: 5px 15px 0 0;
     }
   }
 
   &-title {
     display: inline-block;
     color: $text-base-color;
-    font-family: Avenir;
     font-weight: 550;
     font-size: 20px;
     font-style: normal;
     line-height: 28px;
-    padding: 18px 0 14px 20px;
+    padding: 11px 0 10px 20px;
     margin: 0;
     word-wrap: break-all;
     word-break: break-all;
@@ -119,14 +114,12 @@
   &-sbtitle {
     display: inline-block;
     color: $text-base-color;
-    font-family: Avenir;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    opacity: 0.6;
     word-wrap: break-all;
-    padding: 0 17px 0 20px;
+    padding: 0 17px 25px 20px;
     margin: 0;
     white-space: pre-wrap; 
   }
@@ -134,7 +127,7 @@
   &-img {
     display: inline-block;
     position: absolute;
-    top: 25px;
+    top: 21px;
     left: 290px;
 
     &:hover {
@@ -150,6 +143,21 @@
         opacity: 0.6;
       }
     }
+
+    &-comment {
+      display: inline-block;
+      margin-left:285px;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .image-tag {
+    display: none;
+    width: 0;
+    height: 0;
   }
 
 
@@ -192,30 +200,11 @@
       opacity: 0.5;
     }
   }
-}
 
-.comment {
-  &-text {
-    display: inline-block;
-    font-family: Avenir;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    padding-top: 2px;
-    padding-left: 20px;
-  }
-
-  &-btn {
-    text-decoration: none;
-    color: $text-base-color;
-
-    &:hover {
-      opacity: 0.5;
-    }
+  &-link {
+    text-emphasis: none;
   }
 }
-
 
 /* ユーザーの画像*/
 
@@ -225,8 +214,8 @@
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  margin-left: 21px;
-  bottom: 20px;
+  margin-left: 30px;
+  top: -38px;
 }
 
 
