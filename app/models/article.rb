@@ -22,6 +22,7 @@ class Article < ApplicationRecord
   validates :content, length: { minimum: 3 }
   validates :content, uniqueness: true
 
+  has_many :comments, dependent: :destroy
   belongs_to :user
   has_one_attached :image
 

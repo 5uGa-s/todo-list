@@ -11,6 +11,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @comments = @article.comments
   end
 
   def new
@@ -49,7 +50,6 @@ class ArticlesController < ApplicationController
     flash[:notice] = '⚪︎削除出来ました。'
     redirect_to root_path
   end
-
 
 
   private

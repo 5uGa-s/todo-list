@@ -1,0 +1,9 @@
+.error-message= flash.now[:error]
+.new-container
+  %h2.title Edit Comment
+  = form_with(model: @comment, url: article_comment_path(@article, @comment), method: 'patch', local: true) do |f|
+    %div
+      = f.label :content, 'Description', class: 'sb-title'
+    %div
+      = f.text_area :content, class: 'comments-form'
+    = f.submit 'Submit', class: 'btn-primary-comment'

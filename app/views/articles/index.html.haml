@@ -9,7 +9,7 @@
             %ul
               %li= link_to "Edit", edit_article_path(article), class: 'dropdown-text1'
               %li= link_to "Delete", article_path(article), method: 'delete', data: { confirm: '本当に削除してよろしいですか？' }, class: 'dropdown-text2'
-    = link_to article_path(id: article.id), class: 'board-link' do
+    = link_to article_path(id: article.id), class: 'board-link', style: 'text-decoration: none;' do
       .board-card
         - if article.image.attached?
           .image-tag
@@ -17,12 +17,10 @@
         %p.board-title= article.title
         %br
         %p.board-sbtitle= article.content
-        %br
         %p.board-name= article.author_name
-        %br
         %p.board-time= article.display_created_at
-        .image-tag
-          = image_tag article.user.avatar_image, class: 'user_avatar'
+      .image-tag
+        = image_tag article.user.avatar_image, class: 'user_avatar'
   .board-add
     %p.add-text
       = link_to "+ Add new borad", new_article_path, class: 'add-btn'
