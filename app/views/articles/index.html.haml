@@ -12,7 +12,7 @@
     = link_to article_path(id: article.id), class: 'board-link', style: 'text-decoration: none;' do
       .board-card
         - if article.image.attached?
-          .image-tag
+          .img-tag
             = image_tag article.image, class: 'article-image' 
         %p.board-title= article.title
         %br
@@ -21,6 +21,15 @@
         %p.board-time= article.display_created_at
       .image-tag
         = image_tag article.user.avatar_image, class: 'user_avatar'
+      .image-tag-comments
+        - last_three_commenters = article.comments.last(3).map(&:user).uniq.last(3)
+        - last_three_commenters.each do |user|
+          = image_tag user.avatar_image, class: 'avatar-image'
+      .image-tag-comment
+        = image_tag 'fukidashi.png', class: 'count-img'
+        %span.comment-count= article.comments.count
+%br
+%br
   .board-add
     %p.add-text
       = link_to "+ Add new borad", new_article_path, class: 'add-btn'
