@@ -47,6 +47,8 @@
         %p.comments-text= comment.content
         %p.comments-time= comment.display_created_at
         %p.comments-name= comment.author_name
+%br
+%br
   .board-add
     %p.add-text
       = link_to "+ Add Comments", new_article_comment_path(@article), class: 'add-btn'

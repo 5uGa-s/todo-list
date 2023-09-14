@@ -29,6 +29,28 @@ $(document).ready(function() {
 
 });
 
+function adjustCommentCount() {
+  setTimeout(function () {
+    const commentCount = document.querySelector(".comment-count");
+    if (commentCount) {
+      // 数字の幅を取得
+      const width = commentCount.offsetWidth;
+
+      // 幅が一定値より大きい場合、左にずらす
+      if (width > 10) {
+        commentCount.style.marginRight = "5px"; // 左にずらす幅を設定
+      }
+    }
+  }, 10); // 適切な遅延時間を設定
+}
+
+// ページ初期読み込み時
+document.addEventListener("DOMContentLoaded", adjustCommentCount);
+
+// ページ遷移時
+window.addEventListener("popstate", adjustCommentCount);
+
+
 
 
 

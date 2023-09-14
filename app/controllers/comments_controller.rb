@@ -4,6 +4,10 @@ class CommentsController < ApplicationController
   def new
     article = Article.find(params[:article_id])
     @comment = article.comments.build
+    unless user_signed_in?
+      flash[:error] = '⚪︎コメントを投稿するにはログインしてください。'
+      redirect_to new_user_session_path
+    end
   end
 
   def create
