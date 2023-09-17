@@ -1,0 +1,16 @@
+{
+  "name": "todo-list",
+  "description": "This is todo-list",
+  "keywords": [],
+  "website": "",
+  "repository": "https://github.com/5uGa-s/todo-list",
+  "env": {},
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "buildpacks": [{
+    "url": "heroku/nodejs"
+  }, {
+    "url": "heroku/ruby"
+  }]
+}
