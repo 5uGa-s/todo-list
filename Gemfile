@@ -31,6 +31,7 @@ gem 'pry-byebug'
 gem 'rubocop-rails'
 gem 'jquery-rails'
 gem 'image_processing', '~> 1.10' # 画像処理のため
+gem 'aws-sdk-s3', require: false
 
 
 # Use Active Storage variant

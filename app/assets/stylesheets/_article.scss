@@ -54,9 +54,40 @@
     border-radius: 10px;
     background-color: #F4F4F4;
     margin: 0 10px -5px 10px;
-    padding-top: 12px;
+    padding-top: 8px;
     box-shadow: 0px 2px 8px rgba(7, 7, 7, 0.25);
     text-decoration: none;
+
+    &-show {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      height: auto;
+      width: auto;
+      flex-shrink: 0;
+      border-radius: 10px;
+      background-color: #F4F4F4;
+      margin: 0 10px -5px 10px;
+      padding-top: 0;
+      box-shadow: 0px 2px 8px rgba(7, 7, 7, 0.25);
+      text-decoration: none;
+    }
+
+    &-pr {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      height: auto;
+      width: auto;
+      flex-shrink: 0;
+      border-radius: 10px;
+      background-color: #F4F4F4;
+      margin: 0 10px 20px 10px;
+      padding-top: 15px;
+      box-shadow: 0px 2px 8px rgba(7, 7, 7, 0.25);
+      text-decoration: none;
+      line-height: 0;
+    }
   }
 
   &-name {
@@ -78,6 +109,17 @@
       padding-right: 7px;
       line-height: 14px;
     }
+
+    &-pr {
+      display: inline-block;
+      position: relative;
+      top: -8px;
+      left: 55px;
+      font-size: 12px;
+      font-weight: bold;
+      color: $text-sb-color;
+      margin: 0;
+    }
   }
 
   &-time {
@@ -95,6 +137,17 @@
       bottom: 31px;
       margin: 5px 15px 0 0;
     }
+
+    &-pr {
+      display: inline-block;
+      position: relative;
+      top: 5px;
+      left: 55px;
+      font-size: 12px;
+      font-weight: bold;
+      color: $text-sb-color;
+      margin: 0;
+    }
   }
 
   &-title {
@@ -104,7 +157,7 @@
     font-size: 20px;
     font-style: normal;
     line-height: 25px;
-    padding: 0 0 10px 20px;
+    padding: 5px 0 10px 20px;
     margin: 0;
     word-wrap: break-all;
     word-break: break-all;
@@ -127,9 +180,9 @@
 
   &-img {
     display: inline-block;
-    position: absolute;
-    top: 21px;
-    left: 290px;
+    position: relative;
+    top: -2px;
+    left: 295px;
 
     &:hover {
       opacity: 0.6;
@@ -160,6 +213,7 @@
     height: 0;
     margin: 0;
     padding: 0;
+
   }
 
 
@@ -218,6 +272,16 @@
   border-radius: 100%;
   margin-left: 26px;
   top: -40px;
+
+  &-pr {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin-left: 16px;
+    top: -16px;
+  }
 }
 
 .avatar-image {
