@@ -84,5 +84,5 @@ production:
   database: todo_list2
   username: todo_list3
   password: <%= ENV['TODO_LIST_DATABASE_PASSWORD'] %>
-  host: <%= ENV['DATABASE_HOST'] %>
+  host: <%= ENV['DATABASE_URL'] %>
 
