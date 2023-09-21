@@ -77,13 +77,13 @@ test:
 #
 # You can use this database configuration with:
 #
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
+  
 #
 production:
   <<: *default
   database: todo-list2
   username: todo-list3
+  url: <%= ENV['DATABASE_URL'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
   host: <%= ENV['DATABASE_HOST'] %>
 
