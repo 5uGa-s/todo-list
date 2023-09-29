@@ -16,6 +16,7 @@
     "yarn": "1.x"
   },
   "devDependencies": {
-    "webpack-dev-server": "^4.15.1"
+    "webpack-dev-server": "^4.15.1",
+    "sass": "^1.68.0"
   }
 }
