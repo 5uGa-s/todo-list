@@ -30,7 +30,7 @@
                     %li= link_to "Profile", profile_path, class: 'dropdown-profile'
                     %li= link_to "Logout", destroy_user_session_path, method: :delete, class: 'dropdown-logout'
               -else
-                = image_tag 'profile-img', class: 'header_avatar'
+                = image_tag 'profile-img.png', class: 'header_avatar'
                 .dropdown-wrapper
                   %ul
                     %li= link_to "Sign up", new_user_registration_path, class: 'dropdown-signup'
